@@ -24,12 +24,14 @@ const updateTotal = () => {
 };
 
 const updateItems = () => {
+     var items = appleCount + bananaCount + mangoCount + leImposter;
+    //[];
     itemize.innerHTML = items;
     
-     items = appleCount;
+     
     // console.log(appleCount);
 };
-// console.log(appleCount + 1);
+
 const addApple = () => {
  
   shoppingCart.innerHTML = `<li>Apple</li>`;
@@ -37,14 +39,18 @@ const addApple = () => {
   appleCount += 1;
   // console.log("Apple",appleCount);
   updateTotal();
+  updateItems();
 };
 appleButton.addEventListener("click", addApple);
-
+function ApplePen() {
+  let x = document.forms["appleForm"]["apple"].value;
+};
 const addBanana = () => {
   shoppingCart.innerHTML = `<li>Banana</li>`;
   totalInCents += 30;
   bananaCount += 1;
   updateTotal();
+  updateItems();
 };
 bananaButton.addEventListener("click", addBanana);
 
@@ -53,6 +59,7 @@ const addMango = () => {
   totalInCents += 125;
   mangoCount += 1;
   updateTotal();
+  updateItems();
 };
 mangoButton.addEventListener("click", addMango);
 
@@ -62,6 +69,7 @@ const addImposter = () => {
   totalInCents += 225;
   leImposter += 1;
   updateTotal();
+  updateItems();
 };
 imposterButton.addEventListener("click", addImposter);
 
@@ -75,4 +83,6 @@ clearButton.addEventListener("click", emptyCart);
 console.log(appleCount);  
 //p3
 // total.addEventListener("click", updateTotal());
+
+
 
