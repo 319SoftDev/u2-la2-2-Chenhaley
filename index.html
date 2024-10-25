@@ -14,12 +14,16 @@
   <body>
     <div class="container content has-text-centered">
       <section class="section">
-        <h1 class="title">Welcome to E-Foods</h1>
+        <h1 class="title">Welcome to E-Stuff</h1>
         <p>Click an item to add it to your cart.</p>
         <div id="button-group" class="columns">
           <div class="column">
             <button class="button is-small" id="apple">🍎 Apple: $0.75</button>
           </div>
+          <form name="appForm" action="/action_page.php" onsubmit="return applePen()" method="post">
+            Apple: <input type="Value" name="apple">
+            <input type="submit" value="Add">
+          </form>
           <div class="column">
             <button class="button is-small" id="banana">🍌 Banana: $0.30</button>
           </div>
@@ -54,4 +58,3 @@
     
   </body>
 </html>
-
